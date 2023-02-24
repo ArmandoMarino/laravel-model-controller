@@ -6,9 +6,11 @@
 {{-- HTML --}}
 @section('content')
 <div id="content-home">
-    <div class="col-12 col-md-6 col-lg-4"> 
-    
-    </div>
+    @forelse ($movies as $movie)
+        @include('includes.movies.card')
+        @empty
+        <h2>Nessun risultato</h2>
+    @endforelse
 </div>
 @endsection
 

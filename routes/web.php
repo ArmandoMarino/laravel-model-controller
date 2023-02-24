@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\MovieController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,7 +19,6 @@ use App\Http\Controllers\AboutController;
 
 //Go to HomeController class and pick public function index
 Route::get('/', [HomeController::class, 'index'])->name('home');
-
 
 Route::get('/movies', [MovieController::class, 'index'])->name('movies');
 
