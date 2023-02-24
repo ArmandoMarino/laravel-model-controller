@@ -15,7 +15,7 @@
    
 
 
-        <main class="my-4">
+        <main class="container-fluid">
             @yield('content')
         </main>
 
