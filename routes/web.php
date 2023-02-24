@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\AboutController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,21 +15,12 @@ use App\Http\Controllers\HomeController;
 |
 */
 
+//Go to HomeController class and pick public function index
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 
-Route::get('/movies', function () {
-    return view('movies');
-})->name('movies');
+Route::get('/movies', [MovieController::class, 'index'])->name('movies');
 
-Route::get('/movies', function () {
-    return view('movies');
-})->name('movies');
+Route::get('/contacts', [ContactController::class, 'index'])->name('contacts');
 
-Route::get('/contacts', function () {
-    return view('contacts');
-})->name('contacts');
-
-Route::get('/about', function () {
-    return view('about');
-})->name('about');
+Route::get('/about', [AboutController::class, 'index'])->name('about');
