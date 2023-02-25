@@ -5,7 +5,7 @@
 
 {{-- HTML --}}
 @section('content')
-<div id="content-movies" class="container my-5">
+<div id="content-movies" class="my-2">
     <div class="row g-4">
         @forelse ($movies as $movie)
             @include('includes.movies.card')
